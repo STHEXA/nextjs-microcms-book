@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://nextjs-microcms-book-livid.vercel.app/sitemap.xml 
