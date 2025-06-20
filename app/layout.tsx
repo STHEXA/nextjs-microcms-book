@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import "./globals.css";
+// import { GoogleAnalytics } from "@next/third-parties/google";
+// import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
@@ -32,6 +34,8 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      {/* <GoogleAnalytics gaId="G-" />
+      <GoogleTagManager gtmId="GTM-" /> */}
     </html>
   );
 }

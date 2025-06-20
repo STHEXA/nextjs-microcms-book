@@ -2,6 +2,8 @@
 import { useFormState } from "react-dom";
 import styles from "./index.module.css";
 import { createContactData } from "@/app/_actions/contact";
+// import { sendGAEvent } from "@next/third-parties/google";
+// import { sendGTMEvent } from "@next/third-parties/google";
 
 const initialState = {
   status: "",
@@ -11,6 +13,14 @@ const initialState = {
 export default function ContactForm() {
   const [state, formAction] = useFormState(createContactData, initialState);
   console.log(state);
+
+  // const handleSubmit = () => {
+  //   sendGAEvent({ event: "contact", value: "submit" });
+  // };
+  // const handleSubmit = () => {
+  //   sendGTMEvent({ event: "contact", value: "submit" });
+  // };
+
   if (state.status === "success") {
     return (
       <p className={styles.success}>
@@ -21,6 +31,7 @@ export default function ContactForm() {
     );
   }
   return (
+    // <form className={styles.form} action={formAction} onSubmit={handleSubmit}>
     <form className={styles.form} action={formAction}>
       <div className={styles.horizontal}>
         <div className={styles.item}>
